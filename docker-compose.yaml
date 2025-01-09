@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+ mlinha-web:
+  image: mlinha-frontend
+  restart: always
+  ports:
+   - "${FRONT_END_PORT}:${FRONT_END_PORT}"
+  environment:
+   FRONT_END_PORT: ${FRONT_END_PORT}
+   FRONT_END_HOST: ${FRONT_END_HOST}
+   FRONT_END_DEBUG: ${FRONT_END_DEBUG}
+
+ mlinhabackend:
+  image: mlinha-api-app
+  restart: always
+  port:
+   - "${API_PORT}:3000"

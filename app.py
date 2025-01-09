@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, request
 from flask import render_template
 import json
 import requests
@@ -12,10 +12,12 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template("submit.html");
+    return render_template("submit.html", 
+                           url_apidescriptors = os.getenv("FRONT_END_HOST") + ":"+ os.getenv("FRONT_END_PORT"));
 @app.route("/submit")
 def submit():
-    return render_template("submit.html");
+    return render_template("submit.html",
+                           url_apidescriptors = os.getenv("FRONT_END_HOST") + ":"+ os.getenv("FRONT_END_PORT"));
 @app.route("/about")
 def about():
     return render_template("about.html");

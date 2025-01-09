@@ -47,6 +47,11 @@ async function funcsend(){
         console.error("Cannot get file input with id name 'formFile'");
         return;
     }
+    var url_apidescriptors = document.querySelector(".url_apidescriptors");
+    if(!url_apidescriptors){
+        console.log("Cannot get 'url_apidescriptors'");
+        return;
+    }
     var response_textarea = document.querySelector(".myresponse");
     if(!response_textarea){
         console.error("Cannot get textarea with id name 'myresponse'");
