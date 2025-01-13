@@ -29,8 +29,10 @@ def contact():
 def apidescriptors():
     bytesfile = request.files['files'].read()
     files={ 'file':(request.form['name'], bytesfile) }
-    url= os.getenv("API") + "/descriptors"
+    url= "http://" + os.getenv("API") + ":" + os.getenv("API_PORT") + "/descriptors"
+    #url= os.getenv("API") + "/descriptors"
     res = requests.post( url, files=files)
+    
     return json.loads(res.text);
 if __name__ == '__main__':
     debug = False

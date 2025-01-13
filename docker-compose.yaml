@@ -1,17 +1,36 @@
 version: '3.7'
 services:
  mlinha-web:
+  build: .
   image: mlinha-frontend
+  container_name: container_frontend
   restart: always
   ports:
    - "${FRONT_END_PORT}:${FRONT_END_PORT}"
+  networks:
+   - mlinha-net
   environment:
    FRONT_END_PORT: ${FRONT_END_PORT}
    FRONT_END_HOST: ${FRONT_END_HOST}
    FRONT_END_DEBUG: ${FRONT_END_DEBUG}
+   API: ${API}
+   API_PORT: ${API_PORT}
+  expose:
+   - "${FRONT_END_PORT}"
 
  mlinhabackend:
-  image: mlinha-api-app
+  image: mlinha-api_app
+  container_name: container_api
   restart: always
-  port:
+  ports:
    - "${API_PORT}:3000"
+  networks:
+   - mlinha-net
+  expose:
+   - "${API_PORT}"
+
+
+
+networks:
+ mlinha-net:
+
