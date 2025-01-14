@@ -19,7 +19,7 @@ services:
    - "${FRONT_END_PORT}"
 
  mlinhabackend:
-  image: mlinha-api_app
+  image: mlinha-api-app
   container_name: container_api
   restart: always
   ports:
