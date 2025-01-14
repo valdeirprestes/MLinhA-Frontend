@@ -15,6 +15,7 @@ Se for Debian/Ubuntu, instale o pacote venv. O nome do pacote venv pode mudar de
 
  Instalar o Flask
 - pip install flask
+
  Instalar o python-dotenv
 - pip install python-dotenv
 
