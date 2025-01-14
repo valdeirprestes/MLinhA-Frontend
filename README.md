@@ -1,7 +1,7 @@
 
 
 # 1ª Se estiver usando Linux, crie um ambiente particular para baixar os pacotes do python.
-Se for Debian/Ubuntu, instale o pacote venv.
+Se for Debian/Ubuntu, instale o pacote venv. O nome do pacote venv pode mudar dependendo da versão da sua distribuição.
  - apt install python3.11-venv
 
 #Agora crie o ambiente virtual.
@@ -14,11 +14,11 @@ Se for Debian/Ubuntu, instale o pacote venv.
 # 2ª Agora vamos instalar o pacotes necessários com pip (ferramenta de gestão de pacote do Python).
 
  Instalar o Flask
-- pip install Flask
+- pip install flask
  Instalar o python-dotenv
 - pip install python-dotenv
 
- Instalar a bibliotea request para realizar requisições
+ Instalar a biblioteca request para realizar requisições
 - pip install requests
 
 
@@ -26,7 +26,7 @@ Se for Debian/Ubuntu, instale o pacote venv.
 #  3ª Agora baixe o repositorio. Talvez você tenha que instalar o aplicativo git antes de baixar o repositório.
  - git clone https://github.com/valdeirprestes/MLinhA-Frontend.git
 
-Antes de rodar é importante que você rodar o frontend, baixe e rode num docker o MLinhaApi (link abaixo para detalhes)
+Antes de rodar o frontend é importante que baixe e rode em docker MLinhaApi (link abaixo para detalhes) para ter imagem deste sistema.
 https://github.com/diegodslima/MLinhA-API
 
 
